@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('spiderman')">Spiderman</button>
+  <button onclick="filterImages('captain')">Captain America</button>
+  <button onclick="filterImages('ironman')">Ironman</button>
+</div>
+
+<div class="gallery">
+
+  <div class="image-box spiderman">
+    <img src="image/sp1.jpg" onclick="openLightbox(0)">
+  </div>
+
+  <div class="image-box captain">
+    <img src="image/ca1.jpg" onclick="openLightbox(1)">
+  </div>
+
+  <div class="image-box ironman">
+    <img src="image/im1.jpg" onclick="openLightbox(2)">
+  </div>
+
+  <div class="image-box spiderman">
+    <img src="image/sp2.jpg" onclick="openLightbox(3)">
+  </div>
+
+  <div class="image-box captain">
+    <img src="image/ca2.jpg" onclick="openLightbox(4)">
+  </div>
+
+  <div class="image-box ironman">
+    <img src="image/im2.jpg" onclick="openLightbox(5)">
+  </div>
+ 
+  
+     <div class="image-box spiderman">
+      <img src="image/sp3.jpg" onclick="openLightbox(5)">
+    </div>
+    
+    <div class="image-box ironman">
+      <img src="image/imm3.jpg" onclick="openLightbox(5)">
+    </div> 
+
+    
+    <div class="image-box captain america">
+      <img src="image/ca3.jpg" onclick="openLightbox(1)">
+    </div> 
+
+     <div class="image-box spiderman">
+      <img src="image/sp4.jpg" onclick="openLightbox(5)">
+    </div> 
+
+     
+    <div class="image-box ironman">
+      <img src="image/im4.jpg" onclick="openLightbox(5)">
+    </div>  
+
+    <div class="image-box captain america">
+      <img src="image/ca4.jpg" onclick="openLightbox(1)">
+    </div>
+    
+    <div class="image-box spiderman">
+      <img src="image/sp5.jpg" onclick="openLightbox(5)">
+    </div>
+
+    <div class="image-box ironman">
+      <img src="image/im5.jpg" onclick="openLightbox(5)">
+    </div>
+   
+
+</div>
+
+
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img">
+  <button class="prev" onclick="changeImage(-1)">❮</button>
+  <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
