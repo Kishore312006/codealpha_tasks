@@ -1,4 +1,4 @@
-// Navbar active highlight while scrolling_____________________-
+// Navbar active highlight while scrolling
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -6,7 +6,8 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
+    const sectionTop = section.offsetTop - 120;
+
     if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
@@ -31,17 +32,5 @@ window.addEventListener("scroll", () => {
     if (cardTop < screenHeight - 100) {
       card.classList.add("show");
     }
-  });
-});
-
-// Social icon click effect
-const socials = document.querySelectorAll(".social a");
-
-socials.forEach(icon => {
-  icon.addEventListener("click", () => {
-    icon.style.transform = "scale(1.3)";
-    setTimeout(() => {
-      icon.style.transform = "scale(1)";
-    }, 200);
   });
 });
