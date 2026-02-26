@@ -1,4 +1,4 @@
-// Navbar active highlight while scrolling
+
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -6,8 +6,7 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-
+    const sectionTop = section.offsetTop - 100;
     if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
@@ -21,15 +20,13 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Card animation on scroll
+
 const cards = document.querySelectorAll(".card");
 
 window.addEventListener("scroll", () => {
   cards.forEach(card => {
     const cardTop = card.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-
-    if (cardTop < screenHeight - 100) {
+    if (cardTop < window.innerHeight - 100) {
       card.classList.add("show");
     }
   });
